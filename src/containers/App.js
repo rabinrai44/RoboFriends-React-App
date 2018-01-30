@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll';
+import Hero from '../components/Hero';
 import './App.css';
 
 
@@ -36,13 +36,19 @@ class App extends Component {
                 return !robots.length ?
                      <h1>Loading</h1> :
                     (
-                        <div className='tc'>
-                            <h1 className="f1">RoboFriends</h1>
-                            <SearchBox searchChange={this.onSearchChange} />
-                            <Scroll>
-                                <CardList robots={filteredRobots} />
-                            </Scroll>
-                        </div>
+                    <main>
+                        <section className="jumbotron text-center">
+                            <Hero />
+
+                            <div className="search-box">
+                                <SearchBox searchChange={this.onSearchChange} />
+                            </div>
+                        </section>
+                      
+                        <div className="album bg-light">
+                            <CardList robots={filteredRobots} />
+                        </div> 
+                    </main>
                     );
                 }
         }
