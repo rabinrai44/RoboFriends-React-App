@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Hero from '../components/Hero';
+import Footer from '../components/Footer';
 import './App.css';
 
 
@@ -36,6 +37,7 @@ class App extends Component {
                 return !robots.length ?
                      <h1>Loading</h1> :
                     (
+                    <div>
                     <main>
                         <section className="jumbotron text-center">
                             <Hero />
@@ -49,6 +51,11 @@ class App extends Component {
                             <CardList robots={filteredRobots} />
                         </div> 
                     </main>
+                    
+                    <footer class="text-muted">
+                        <Footer />
+                    </footer>
+                    </div>
                     );
                 }
         }
