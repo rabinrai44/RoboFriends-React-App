@@ -52,7 +52,7 @@ class App extends Component {
                         </div> 
                     </main>
                     
-                    <footer class="text-muted">
+                    <footer className="text-muted">
                         <Footer />
                     </footer>
                     </div>

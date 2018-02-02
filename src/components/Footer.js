@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div class="container">
-          <p class="float-right">
+        <div className="container">
+          <p className="float-right">
             <a href="#">Back to top</a>
           </p>
           <p> &copy; 2018 Robot Friend, All Rights Reserved.</p>
